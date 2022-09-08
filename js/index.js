@@ -49,6 +49,9 @@ const updateCalculator = () => {
         elem.classList.remove("active");
       });
 
+      totalTip = 0;
+      numOfPeopleTotal = 0;
+
       setTimeout(() => {
         resetButton.disabled = true;
       }, 500);
@@ -142,15 +145,6 @@ const updateCalculator = () => {
       elem.classList.remove("active");
     });
   });
-
-  //Disables reset button if all input fields are empty and not in focus
-  document.querySelectorAll("input[type=number]").forEach((elem) => {
-      elem.addEventListener("blur", (e) => {
-          if(elem.value === "") {
-              resetButton.disabled = true;
-          }
-      });
-  })
 
 };
 
