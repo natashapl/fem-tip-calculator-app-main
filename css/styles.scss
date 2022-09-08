@@ -1,0 +1,360 @@
+/* Color Palette */
+
+$white : white;
+$blackSqueeze-cyan: #F3F9FA;
+$jaggedIce-cyan: #C5E4E7;
+$waterLeaf-cyan:#9FE8DF;
+$java-cyan: #26C2AE;
+$towerGray: #9EBBBD;
+$grannySmith-cyan: #7F9D9F;
+$cuttySark-cyan: #5E7A7D;
+$atoll-cyan:   #0D686D;
+$sherpaBlue-cyan: #00474B;
+$terracotta-orange: #E17457;
+
+/* Standardises all elements */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* Styles for Tip Calculator */
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Space Mono', monospace, Courier;
+    font-size: 24px;
+    font-weight: 700;
+    background-color: $jaggedIce-cyan;
+}
+
+/* Typography */
+
+h1 {
+    font-size: 18px;
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+    text-align: center;
+    line-height: 1em;
+    margin: 50px 0 40px;
+}
+
+h1,
+main {
+    width: 100%;
+}
+
+h2,
+h3 {
+    font-size: 16px;
+}
+
+h2 {
+    margin: 0 0 10px;
+    color: $cuttySark-cyan;
+}
+
+/* For fields and Buttons */
+input,
+button {
+    font-size: 24px;
+    height: 48px;
+    border-radius: 5px;
+}
+
+button {
+    cursor: pointer;
+}
+
+input[type=number] {
+    background-color: $blackSqueeze-cyan;
+    border: 1px solid $white;
+    text-align: right;
+    padding: 15px 20px;
+    width: 100%;
+    color: $sherpaBlue-cyan;
+    border-radius: 5px;
+
+    &::placeholder {
+        color: $towerGray;
+    }
+
+    &:focus {
+        outline: 2px solid $java-cyan;
+    }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.billInput {
+    background: url("../images/icon-dollar.svg") no-repeat 20px 15px;
+}
+
+.numOfPeopleInput {
+    background: url("../images/icon-person.svg") no-repeat 20px 15px;
+}
+
+/* Layout */
+.root {
+    min-width: 300px;
+}
+
+.root,
+main,
+.container {
+    width: 100%;
+}
+
+.container {
+    background: $white;
+    padding: 38px 32px 32px;
+    border-radius: 20px;
+    margin: 0 0 20px;
+}
+
+/* General Styles */
+
+section {
+    position: relative;
+
+    p {
+        margin: 0 0 40px;
+    }
+
+    .tipInput,
+    .customFieldWrapper {
+        width: 48.5%;
+        margin: 0 0 16px;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .customFieldWrapper {
+        input {
+            width: 100%;
+
+            &::placeholder {
+                color: $cuttySark-cyan;
+            }
+        }
+    }
+
+    .tipInput {
+        background-color: $sherpaBlue-cyan;
+        border: 1px solid $sherpaBlue-cyan;
+        color: $white;
+
+        &.active {
+            background: $java-cyan;
+            color: $sherpaBlue-cyan;
+            border: 1px solid $java-cyan;
+        }
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}
+
+.tipSection {
+    p {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;        
+    }
+}
+
+.totalsSection {
+    color: $white;
+    background-color: $sherpaBlue-cyan;
+    padding: 45px 24px 24px;
+    border-radius: 15px;
+
+    .contentRow {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        h3 {
+            margin: 5px 0 35px;
+
+            span {
+                display: block;
+            }
+            .mainHeaderText {
+                font-size: 16px;
+                color: $white;
+                margin: 0 0 7px;
+            }
+    
+            .subHeaderText {
+                font-size: 13px;
+                color: $grannySmith-cyan;
+            }
+        }
+
+        .total {
+            font-size: 32px;
+            color: $java-cyan;
+        }
+    }
+
+    .resetButton {
+        width: 100%;
+        border: 1px solid $atoll-cyan;
+        background: $java-cyan;
+        color: $sherpaBlue-cyan;
+
+        &:disabled {
+            background: $atoll-cyan;
+            color: $sherpaBlue-cyan;
+            cursor: none;
+        }
+    }
+
+}
+
+footer {
+    width: 100%;
+    font-size: 12px;
+    color: $sherpaBlue-cyan;
+    text-align: center;
+    position: relative;
+    margin: 20px 0;
+
+    a {
+        color: $sherpaBlue-cyan;
+    }
+}
+
+/* Validatiom */
+
+.errorMessage {
+    display: none;
+    font-size: 16px;
+    color: $terracotta-orange;
+    position: absolute;
+    right: 0;
+}
+
+input.error {
+    border: 2px solid $terracotta-orange;
+    
+    &:focus {
+        outline: 2px solid $terracotta-orange;
+    }   
+}
+
+@media screen and (min-width: 992px) {
+    .root {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    input[type=number] {
+        padding: 15px 10px;
+    }
+
+    .container {
+        max-width: 920px;
+        margin: 0 auto;       
+        padding: 32px;
+
+        form {
+            display: table;
+            width: 100%;
+        }
+
+        .contentColumn,
+        .totalsSection {
+            display: table-cell;
+            vertical-align: top;
+        }
+
+        .contentColumn {
+            width: 50%;
+            max-width: 425px;
+            padding: 20px 49px 0 0;
+
+            .tipSection {
+                p {
+                    margin: 0 0 28px;                  
+                }
+
+                .tipInput,
+                .customFieldWrapper {
+                    max-width: 117px;
+                }
+
+                .tipInput {
+                    &:hover {
+                        background: $waterLeaf-cyan;
+                        color: $sherpaBlue-cyan;
+                        border: 1px solid $waterLeaf-cyan;
+                    }
+                }
+            }
+
+        }
+
+        .totalsSection {
+            width: 50%;
+            max-width: 413px;
+
+
+            .contentRow {
+                h3 {
+                    margin: 5px 0 45px;
+                }
+
+                .total {
+                    font-size: 48px;
+                }
+            }
+
+            .resetButtonWrapper {
+                width: 88%;
+                position: absolute;
+                bottom: 24px;
+
+                .resetButton {
+                    &:hover {
+                        background: $waterLeaf-cyan;
+                        color: $sherpaBlue-cyan;
+                        cursor: pointer;
+
+                        &:disabled {
+                            background: $atoll-cyan;
+                            color: $sherpaBlue-cyan;
+                            cursor: default;
+                        }
+                    }
+                }
+            }
+        
+        }
+    }
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+        <title>Frontend Mentor | Tip calculator app</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+        <script src="js/index.js" async></script>
+    </head>
+    <body>
+        <div class="root">
+            <main>
+                <h1>
+                    <a href="/"><img src="images/logo.svg" alt="Splitter" /></a>
+                </h1>
+                <div class="container">
+                    <form>
+                        <div class="contentColumn">
+                            <section class="billSection">
+                                <h2>Bill</h2>
+                                <p>
+                                    <input class="billInput" name="billInput" type="number" placeholder="0" value="" min="0" max="15" />
+                                </p>
+                            </section>
+                            <section class="tipSection">
+                                <h2>Select Tip %</h2>
+                                <p>
+                                    <button class="tipInput" name="tipInput" type="button" value="5">
+                                        5%
+                                    </button>
+                                    <button class="tipInput" name="tipInput" type="button" value="10">
+                                        10%
+                                    </button>
+                                    <button class="tipInput" name="tipInput" type="button" value="15">
+                                        15%
+                                    </button>
+                                    <button class="tipInput" name="tipInput" type="button" value="25">
+                                        25%
+                                    </button>
+                                    <button class="tipInput" name="tipInput" type="button" value="50">
+                                        50%
+                                    </button>
+                                    <span class="customFieldWrapper">
+                                        <input class="customInput" name="tipInput" type="number" placeholder="Custom" value="" min="0" max="7" />
+                                    </span>
+                                </p>
+                            </section>
+                            <section class="numOfPeopleSection">
+                                <h2>
+                                    <span class="title">Number of People</span>
+                                    <span class="errorMessage">Can't be zero</span>
+                                </h2>
+                                <p>
+                                    <input class="numOfPeopleInput" name="numOfPeopleInput" type="number" placeholder="0" value="" min="0" max="7" />
+                                </p>
+                            </section>
+                        </div>
+                        <section class="totalsSection">
+                            <div class="contentRow">
+                                <h3>
+                                    <span class="mainHeaderText">Tip Amount</span>
+                                    <span class="subHeaderText">/ person Total</span>
+                                </h3>
+                                <span class="total tipPerPerson">$0.00</span>
+                            </div>
+                            <div class="contentRow">
+                                <h3>
+                                    <span class="mainHeaderText">Total</span>
+                                    <span class="subHeaderText">/ person</span>
+                                </h3>
+                                <span class="total totalPerPerson">$0.00</span>
+                            </div>
+                            <div class="resetButtonWrapper">
+                                <input class="resetButton" type="reset" name="reset" value="Reset" disabled="disabled" />
+                            </div>
+                        </section>
+                    </form>
+                </div>
+            </main>
+            <footer>
+                <p>
+                    Challenge by
+                    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://www.frontendmentor.io/profile/natashapl">Natasha Pierre-Louis</a>.
+                </p>
+            </footer>
+        </div>
+    </body>
+</html>
