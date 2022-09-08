@@ -40,7 +40,6 @@ For this project, I decided to challenge myself to create the javaScript for thi
 
 - [MDN Web Docs](https://developer.mozilla.org/) - A great resource for all things related to CSS, HTML and Javascript.
 - [W3 Schools](https://www.w3schools.com/) - Another great resource for all things related to CSS, HTML and Javascript
-- [20+ Amazing Pure CSS Accordions [Examples 2022]](https://alvarotrigo.com/blog/css-accordion/) - More examples of pure CSS accordions for inspiration.
 - [Name that Color](https://chir.ag/projects/name-that-color/) - This is still my favorite utility tool for generating unique color names from hex codes.
 
 ## Author
